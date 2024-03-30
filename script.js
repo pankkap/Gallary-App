@@ -21,7 +21,7 @@ async function searchImages(){
     if (page ===1) 
     {
         searchResults.innerHTML = ""
-        
+    }   
         results.map((result)=> {
             const imageWrapper = document.createElement("div") ;
             imageWrapper.classList.add("search-result") ;
@@ -40,7 +40,7 @@ async function searchImages(){
         page++;        
         if (page > 1)
             showMore.style.display =  "block" ;
-    }
+    
 }
 
 formEl.addEventListener("submit",(event) =>{
@@ -50,7 +50,6 @@ formEl.addEventListener("submit",(event) =>{
 });
 
 showMore.addEventListener("click", ()=>{
-    page++;
     searchImages();
 })
 
